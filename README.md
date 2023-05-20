@@ -22,3 +22,5 @@ https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%81%B4%EB%9D%BC%E
 | 섹션 15. 애플리케이션 배포를 위한 컨테이너 가상화 | 5강 ∙ 1시간 1분 |
 | 섹션 16. 애플리케이션 배포 - Docker Container | 17강 ∙ 3시간 |
 | 섹션 17. Appendix: Microservice Architecture 패턴 | 1강 ∙ 19분 |
+
+<img width="1423" alt="image" src="https://github.com/slrslrr2/Spring_Cloud_MSA/assets/58017318/4df6f45e-1252-43fa-943e-75ca38100cea">
