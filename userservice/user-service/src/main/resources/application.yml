@@ -1,0 +1,23 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: user-service
+  database:
+    jdbc-url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: gbitkim
+    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+greeting:
+  message: Welcom to the Simple E-commerce.
