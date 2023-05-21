@@ -2,7 +2,7 @@
 
 Section 2: API Gateway Service
 
-![Untitled]([https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c19fa66-97fa-4ed5-a38d-193971e973e1/Untitled.png](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0c19fa66-97fa-4ed5-a38d-193971e973e1%2FUntitled.png?id=0ef1eda1-25ca-464d-9f06-582987c0da29&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2))
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0c19fa66-97fa-4ed5-a38d-193971e973e1%2FUntitled.png?id=0ef1eda1-25ca-464d-9f06-582987c0da29&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2)
 
 1. 사용자 외부 요청을 단일화할 수 있도록 도와주는 API Gateway Service
 2. Netflix Ribbon과 Zuul
