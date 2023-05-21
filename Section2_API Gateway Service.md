@@ -2,7 +2,7 @@
 
 Section 2: API Gateway Service
 
-![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0c19fa66-97fa-4ed5-a38d-193971e973e1%2FUntitled.png?id=0ef1eda1-25ca-464d-9f06-582987c0da29&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2)
+![Untitled]([https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c19fa66-97fa-4ed5-a38d-193971e973e1/Untitled.png](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0c19fa66-97fa-4ed5-a38d-193971e973e1%2FUntitled.png?id=0ef1eda1-25ca-464d-9f06-582987c0da29&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2))
 
 1. 사용자 외부 요청을 단일화할 수 있도록 도와주는 API Gateway Service
 2. Netflix Ribbon과 Zuul
@@ -21,11 +21,11 @@ Section 2: API Gateway Service
 - 로킹 추적, 상관관계 (클라이언트 요청 헤더, 쿼리스트링 청구)
 - IP 허용 목록에 추가
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c708b23d-5f19-4f31-bc2d-5a2836c95dbb/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc708b23d-5f19-4f31-bc2d-5a2836c95dbb%2FUntitled.png?id=b5d19014-fa63-4219-9527-30807cf8a0bd&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2)
 
 클라이언트 요청이 들어온경우 API Gateway를 통해 진입 후 MS에게 요청을 전달 및 응답을 받고 다시 클라이언트에게 전달한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fba7cc7d-b366-4cea-a2bc-6e2447acd0e3/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffba7cc7d-b366-4cea-a2bc-6e2447acd0e3%2FUntitled.png?id=15497b3d-e13e-4829-bae7-31a3b8f2a30e&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2)
 
 ## Netflix Ribbon
 
@@ -54,11 +54,11 @@ Section 2: API Gateway Service
 
 ## Netfliz Zuul
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9aac2ff0-e2f1-4ee4-8e20-a2590566e0b1/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9aac2ff0-e2f1-4ee4-8e20-a2590566e0b1%2FUntitled.png?id=9e7a5233-4224-4084-8604-bf340a173b3f&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2)
 
 하지만, Netflix Zuul역시 Spring Boot 2.4에서는 **Maintenance** 상태이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a276ef5-7793-4cbe-a156-298ee3c11acf/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5a276ef5-7793-4cbe-a156-298ee3c11acf%2FUntitled.png?id=7311757b-2097-494a-a679-a667576ba768&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1730&userId=&cache=v2)
 
 그렇기에 현재는 위와같이 권장하고있다.
 
@@ -78,9 +78,9 @@ Spring Cloud Gateway를 사용하게되면, Netty 내장서버의 경우 비동�
 
 일단 간단하게 first-service, second-service 2가지를 만든다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/875a3bf6-bc79-42f5-9006-fcdc6fd50db9/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F875a3bf6-bc79-42f5-9006-fcdc6fd50db9%2FUntitled.png?id=93dbfffd-46eb-4248-98d1-6a3ebf57cb43&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc9a29a3-1182-46c7-a534-3891a84032b7/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcc9a29a3-1182-46c7-a534-3891a84032b7%2FUntitled.png?id=d4b15697-9e3f-4da3-b7ea-2b47075a01fb&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 application.yml
 
@@ -146,11 +146,11 @@ public class SecondServiceController {
 
 ## 그리고 spring cloud api gateway를 만들어보자
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8f0b2ab4-4a3f-4e5c-af5b-7d10f0a285f5/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8f0b2ab4-4a3f-4e5c-af5b-7d10f0a285f5%2FUntitled.png?id=6d2fb641-d872-47c9-aeaa-d94c47519ac4&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 **Gateway**, **Eureka Discovery Client**, Lombok 3가지를 설정한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/092efed9-f053-47f7-8e58-f9eb78e4f333/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F092efed9-f053-47f7-8e58-f9eb78e4f333%2FUntitled.png?id=37d91c72-d7b4-4248-99af-6e45648f5e65&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 application.yml
 
@@ -191,15 +191,15 @@ o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8000
 
 spring cloud api로 인하여 first-service인 localhost:8081로 이동하여 다음과 같은 화면이 표시된다
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92181d93-9c32-42db-b002-d6c780a24596/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F92181d93-9c32-42db-b002-d6c780a24596%2FUntitled.png?id=2fc91475-e484-4865-9db0-08f98ab3f3fe&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0958cf8-bfee-4865-b819-25ce1faf4ccc/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe0958cf8-bfee-4865-b819-25ce1faf4ccc%2FUntitled.png?id=b4d0df3d-3631-4b67-b03a-6ecb4b6b1d5d&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 ---
 
 ## Spring Cloud Gateway - Filter
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d2b02a08-fe94-49cf-97cb-bc626ca9c3f3/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd2b02a08-fe94-49cf-97cb-bc626ca9c3f3%2FUntitled.png?id=1be8a606-8429-42e5-b7f4-a4a14801817f&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 Client가 SpringCloud gateway로 요청을 전달하면 First Service와 Second Service로 요청에 알맞게 분기처리한다.
 
@@ -356,7 +356,7 @@ spring:
 
 결과는 아래와 같이 header 값이 MicroService에 전달된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd6915f2-620e-4f04-aaa4-5b97ac1ed8f6/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fbd6915f2-620e-4f04-aaa4-5b97ac1ed8f6%2FUntitled.png?id=7377794f-999d-46ef-a302-a5e5ace34344&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 ---
 
@@ -484,7 +484,7 @@ apigateway-service
 2023-05-20 20:17:20.771  INFO 94520 --- [ctor-http-nio-2] c.e.a.filter.CustomFilter                : Custom POST filter: response code -> 200 OK
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20dbe4e1-be5a-4ddb-a5ee-b2d9336c07d8/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F20dbe4e1-be5a-4ddb-a5ee-b2d9336c07d8%2FUntitled.png?id=859f47cd-3909-4b26-b290-e1e4ac1f5137&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1550&userId=&cache=v2)
 
 ---
 
@@ -588,7 +588,7 @@ public class GlobalFilter extends AbstractGatewayFilterFactory<GlobalFilter.Conf
 ### 결과: default-filters로 설정한 
           공통필터인 GlobalFilter가 먼저 작동 후 CustomFilter가 작동한다
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5e7251f1-ca6e-4550-a48c-d124cb56c737/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5e7251f1-ca6e-4550-a48c-d124cb56c737%2FUntitled.png?id=eef6eabc-41ef-4c8b-8c6b-a5f2b936f45e&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 ---
 
@@ -598,9 +598,9 @@ public class GlobalFilter extends AbstractGatewayFilterFactory<GlobalFilter.Conf
 
 결과는 미리 알아보면 다음과 같다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/312992a6-f002-4076-9a38-d3ee5b99f256/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F312992a6-f002-4076-9a38-d3ee5b99f256%2FUntitled.png?id=a054c666-13ac-45a8-ac68-31969740e9c4&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/495e1328-471d-456c-8862-f881987e8f57/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F495e1328-471d-456c-8862-f881987e8f57%2FUntitled.png?id=96f48d02-3d48-4b26-aecf-5b99cf2f9306&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 apigateway-service - LoggingFilter
 
@@ -649,7 +649,7 @@ public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Co
 
 ## Spring Cloud Gateway - Eureka 연동
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/118a5687-7a47-49a7-a953-ea24c9d353c4/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F118a5687-7a47-49a7-a953-ea24c9d353c4%2FUntitled.png?id=28c34dbf-ebb1-441b-9c03-3fdc9e3367f0&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 1) Client 요청이 들어오면 `API Gateway(8000)` 을 통해 처음 들어오게되며
 
@@ -808,7 +808,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08f2da07-cce0-487f-a5fd-d362916a841a/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F08f2da07-cce0-487f-a5fd-d362916a841a%2FUntitled.png?id=257b7db4-f093-4213-95e4-9c2d135a44e2&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 ---
 
@@ -816,11 +816,11 @@ eureka:
 
 FirstService와 SecondService를 각각 2개씩 기동하는방법
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aef16d78-df5f-4f10-a046-4c1b8ac7d366/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faef16d78-df5f-4f10-a046-4c1b8ac7d366%2FUntitled.png?id=71145f77-3e2f-4864-85ae-1fa30baaa1a1&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 아래와 같이 FirstService를 9091, SecondService를 9092로 실행시켜준다
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/95006cc8-b967-48a2-83da-0c05e8101c27/Untitled.png)
+![Untitled](https://slrslrr1.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F95006cc8-b967-48a2-83da-0c05e8101c27%2FUntitled.png?id=3c3095f6-bfdc-4ad6-86bf-4c7355ced032&table=block&spaceId=510411ac-eb98-4d23-9324-2e8118f124da&width=1920&userId=&cache=v2)
 
 이렇게 된다면 외부 요청이 들어왔을 때, My-FIRST-SERVICE로 요청이 들어오게된다면
 
