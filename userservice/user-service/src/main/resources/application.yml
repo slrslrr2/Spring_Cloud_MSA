@@ -4,11 +4,23 @@ server:
 spring:
   application:
     name: user-service
-  database:
-    jdbc-url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
-    username: root
-    password: gbitkim
+
+  datasource:
     driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate.format_sql: true
+  logging:
+    level:
+      org.hibernate: info
 
 eureka:
   instance:
