@@ -1,8 +1,12 @@
 package com.gbitkim.userservice.dto;
 
+import com.gbitkim.userservice.vo.ResponseOrder;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class UserDto {
@@ -11,5 +15,7 @@ public class UserDto {
     private String userId;
     private String pwd;
     private String encryptedPwd;
-    private Date createAt;
+    private LocalDateTime createAt;
+
+    List<ResponseOrder> orderList = new ArrayList<>();
 }

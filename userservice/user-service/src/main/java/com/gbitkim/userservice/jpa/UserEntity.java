@@ -3,6 +3,7 @@ package com.gbitkim.userservice.jpa;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -22,5 +23,5 @@ public class UserEntity {
     @Column(nullable = false)
     private String encryptedPwd;
     @Column(nullable = false)
-    private Date createAt;
+    private LocalDateTime createAt;
 }
