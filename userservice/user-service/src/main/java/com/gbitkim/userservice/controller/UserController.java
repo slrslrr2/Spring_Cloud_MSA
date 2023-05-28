@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user-service")
+@RequestMapping("/")
 @RequiredArgsConstructor
 public class UserController {
     private final Greeting greeting;
@@ -32,7 +32,7 @@ public class UserController {
         return greeting.getMessage();
     }
 
-    @PostMapping("/user")
+    @PostMapping("/users")
     public ResponseEntity<?> createUser(@RequestBody RequestUser requestUser){
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);

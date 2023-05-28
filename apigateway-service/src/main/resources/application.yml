@@ -23,15 +23,27 @@ spring:
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/user-service/**
+            - Path=/user-service/login # Spring Security가 정의해준 메소드
+            - Method=POST
           filters:
-            - CustomFilter
-        - id: catalog-service
-          uri: lb://CATALOG-SERVICE
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service
+          uri: lb://USER-SERVICE
           predicates:
-            - Path=/catalog-service/**
+            - Path=/user-service/users
+            - Method=POST
           filters:
-            - CustomFilter
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
 
 #        - id: first-service
 #          uri: lb://MY-FIRST-SERVICE
