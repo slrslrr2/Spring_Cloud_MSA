@@ -8,6 +8,7 @@ import com.gbitkim.userservice.vo.ResponseUser;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,10 +22,16 @@ import java.util.List;
 public class UserController {
     private final Greeting greeting;
     private final UserService userService;
+    private final Environment env;
 
     @GetMapping("/health_check")
     public String status(){
-        return "It's Working in User Service";
+        return String.format("It's Working in User Service"
+                + ", \nport(local.server.port)=" + env.getProperty("local.server.port")
+                + ", \nport(server.port)=" + env.getProperty("server.port")
+                + ", \ntoken secret=" + env.getProperty("token.secret")
+                + ", \nptoken expiration time=" + env.getProperty("token.expiration_hours")
+        );
     }
 
     @GetMapping("/greeting")

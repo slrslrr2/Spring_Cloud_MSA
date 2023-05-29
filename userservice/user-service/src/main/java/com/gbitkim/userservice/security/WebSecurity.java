@@ -22,8 +22,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
 //        http.authorizeRequests().antMatchers("/users/*").permitAll();
+        http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/**") // 모든 URL 패턴 허용
-                .hasIpAddress("192.168.0.15")
+//                .hasIpAddress("192.168.0.15")
+                .permitAll()
                 .and()
                 .addFilter(getAuthenticationFilter()); // 해당 필터 통과한 데이터만 작업처리 :  AuthenticationFilter(정의)
         http.headers().frameOptions().disable();
