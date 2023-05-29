@@ -33,3 +33,10 @@ eureka:
 
 greeting:
   message: Welcom to the Simple E-commerce.
+
+logging:
+  level:
+    com.gbitkim.userservice : DEBUG
+
+token:
+  expiration_hours: 24
