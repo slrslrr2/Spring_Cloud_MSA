@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/catalog-service")
+@RequestMapping("/")
 @RequiredArgsConstructor
 public class CatalogController {
     private final CatalogService catalogService;

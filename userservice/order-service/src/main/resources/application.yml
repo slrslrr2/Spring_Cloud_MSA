@@ -13,14 +13,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    generate-ddl: false
-    show-sql: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     properties:
       hibernate.format_sql: true
-  logging:
-    level:
-      org.hibernate: info
 
 eureka:
   instance:
@@ -33,4 +28,4 @@ eureka:
 
 logging:
   level:
-    com.example.orderlogservice: DEBUG
+    com.example.orderservice: DEBUG
