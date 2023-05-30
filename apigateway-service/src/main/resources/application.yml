@@ -67,10 +67,6 @@ management:
       exposure:
         include: refresh, health, beans, httptrace, busrefresh
 
-token:
-  expiration_hours: 24
-  secret: test
-
 #        - id: first-service
 #          uri: lb://MY-FIRST-SERVICE
 #          predicates:

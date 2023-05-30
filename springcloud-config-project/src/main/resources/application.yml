@@ -28,3 +28,4 @@ management:
 #        git:
 #          uri: https://github.com/slrslrr2/Spring_Cloud_MSA_Config.git
 #          username: slrslrr2
+#          password: '{cipher}AQCfPhMcQAEowF9kScP8tZZekZWtN7JZ3G3Kjzfw36gAZ9PHyupizr2vGUNwIK8mVcw00PL1aMP6Nphjfd32rMghGmyMAoPo2S9wFVa8WmcMvpILnRDMydcjL+ksHnsIIvjsNsNttuowWqiFGXX5IP5VnTfiLfnBEIYvPVwxhAv8xxORRVHwBL/w/ru4GVZ3xpW4rasKhztlTAOKlf+31/a6ZOIbzKQKmlPJ19A9yld7lhPUFEk06qEOCnwwn+v958dVbBucNI7YqqhN249cp0WA6irb6JV51aNi44yaUfjGdtSfhbsuRbOJihATfOmwTvHhG3kM4rDOCaLZc0W32iJ5QFUlY7rxf0GpZH9qM5qD1QWhRKamBorOC9Z/YGZjIHBigmEh1Nf6ttHOd0+gPa6KnUaGnJ0kOiJ79QvAYRv9aA=='
