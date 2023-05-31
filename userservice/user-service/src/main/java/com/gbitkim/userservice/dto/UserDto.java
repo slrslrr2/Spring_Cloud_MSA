@@ -5,7 +5,6 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -17,5 +16,5 @@ public class UserDto {
     private String encryptedPwd;
     private LocalDateTime createAt;
 
-    List<ResponseOrder> orderList = new ArrayList<>();
+    List<ResponseOrder> orders = new ArrayList<>();
 }
