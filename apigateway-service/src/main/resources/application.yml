@@ -77,7 +77,7 @@ spring:
             - Path=/order-service/**
           filters:
             - RemoveRequestHeader=Cookie
-#            - RewritePath=/order-service/(?<segment>.*), /$\{segment}
+            - RewritePath=/order-service/(?<segment>.*), /$\{segment}
 management:
   endpoints:
     web:
