@@ -30,7 +30,7 @@ public class UserController {
                 + ", \nport(local.server.port)=" + env.getProperty("local.server.port")
                 + ", \nport(server.port)=" + env.getProperty("server.port")
                 + ", \ntoken secret=" + env.getProperty("token.secret")
-                + ", \nptoken expiration time=" + env.getProperty("token.expiration_hours")
+                + ", \ntoken expiration time=" + env.getProperty("token.expiration_hours")
         );
     }
 

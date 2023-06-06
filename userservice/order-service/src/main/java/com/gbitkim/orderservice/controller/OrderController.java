@@ -2,6 +2,7 @@ package com.gbitkim.orderservice.controller;
 
 import com.gbitkim.orderservice.dto.OrderDto;
 import com.gbitkim.orderservice.jpa.OrderEntity;
+import com.gbitkim.orderservice.messagequeue.KafkaProducer;
 import com.gbitkim.orderservice.service.OrderService;
 import com.gbitkim.orderservice.vo.RequestOrder;
 import com.gbitkim.orderservice.vo.ResponseOrder;
@@ -22,6 +23,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderController {
     private final OrderService orderService;
+    private final KafkaProducer kafkaProducer;
     private final Environment env;
 
     @GetMapping("/health_check")
@@ -43,6 +45,9 @@ public class OrderController {
 
         orderDto = orderService.createOrder(orderDto);
         ResponseOrder userResponse = modelMapper.map(orderDto, ResponseOrder.class);
+
+        kafkaProducer.send("example-catalog-topic", orderDto); // TODO: TOPIC 이름 ENUM 으로 따로 빼놓기
+
         return new ResponseEntity<>(userResponse, HttpStatus.CREATED);
     }
 
