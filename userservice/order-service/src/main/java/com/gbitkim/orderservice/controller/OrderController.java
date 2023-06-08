@@ -3,6 +3,7 @@ package com.gbitkim.orderservice.controller;
 import com.gbitkim.orderservice.dto.OrderDto;
 import com.gbitkim.orderservice.jpa.OrderEntity;
 import com.gbitkim.orderservice.messagequeue.KafkaProducer;
+import com.gbitkim.orderservice.messagequeue.OrderProducer;
 import com.gbitkim.orderservice.service.OrderService;
 import com.gbitkim.orderservice.vo.RequestOrder;
 import com.gbitkim.orderservice.vo.ResponseOrder;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/")
@@ -24,6 +26,7 @@ import java.util.List;
 public class OrderController {
     private final OrderService orderService;
     private final KafkaProducer kafkaProducer;
+    private final OrderProducer orderProducer;
     private final Environment env;
 
     @GetMapping("/health_check")
@@ -43,11 +46,18 @@ public class OrderController {
         OrderDto orderDto = modelMapper.map(requestOrder, OrderDto.class);
         orderDto.setUserId(userId);
 
-        orderDto = orderService.createOrder(orderDto);
-        ResponseOrder userResponse = modelMapper.map(orderDto, ResponseOrder.class);
+        /* jpa */
+//        orderDto = orderService.createOrder(orderDto);
+//        ResponseOrder userResponse = modelMapper.map(orderDto, ResponseOrder.class);
+
+        /* kafka */
+        orderDto.setOrderId(UUID.randomUUID().toString());
+        orderDto.setTotalPrice(orderDto.getUnitPrice() * orderDto.getQty());
 
         kafkaProducer.send("example-catalog-topic", orderDto); // TODO: TOPIC 이름 ENUM 으로 따로 빼놓기
+        orderProducer.send("test", orderDto);
 
+        ResponseOrder userResponse = modelMapper.map(orderDto, ResponseOrder.class);
         return new ResponseEntity<>(userResponse, HttpStatus.CREATED);
     }
 
